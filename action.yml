@@ -1,0 +1,37 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  slackToken:
+    description: 'Token for your slack channel'
+    required: true
+    default: 'n/a'
+  channelId:
+    description: 'Channel ID to send the notifiation'
+    required: true
+    default: 'C02G8D9CC10'
+  notifStatus:
+    description: 'function to run { pipelineStart|pipelineSuccess|pipelineFailure }'
+    required: true
+    default: 'pipelineStart'
+  ts:
+    description: 'set ts to update previous slack notification'
+    default: 'n/a'
+  label:
+    description: 'set pipeline run label'
+    required: true
+    default: 'N/A'
+  pipelineUrl:
+    description: 'set pipeline url for link'
+    required: true
+    default: 'N/A'
+  details:
+    description: 'set content for slack notifs'
+    required: true
+    default: 'N/A'
+outputs:
+  ts: 
+    description: 'slack notif timestamp'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
