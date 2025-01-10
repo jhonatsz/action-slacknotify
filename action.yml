@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Slack Notify'
+description: 'send slack notification'
 inputs:
   slackToken:
     description: 'Token for your slack channel'
